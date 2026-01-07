@@ -7,3 +7,23 @@ FastAPI service plus workers. Key modules:
 - `schemas/` Pydantic models for requests/responses.
 - `db/` SQLAlchemy models, migrations.
 
+## Setup
+
+```bash
+cd backend
+python -m venv .venv
+source .venv/bin/activate
+pip install -e .
+
+cp env.example .env  # fill in provider keys locally (do not commit)
+```
+
+## Run API (dev)
+
+```bash
+cd backend
+./scripts/run_api.sh
+# or
+PYTHONPATH=backend uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+```
+
