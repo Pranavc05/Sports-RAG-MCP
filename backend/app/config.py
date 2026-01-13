@@ -3,7 +3,9 @@ from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
     app_name: str = "Sports RAG + MCP Backend"
+    app_version: str = "0.1.0"
     environment: str = "local"
+    log_level: str = "INFO"
     openai_api_key: str | None = None
     sportsdataio_api_key: str | None = None
     theoddsapi_api_key: str | None = None
